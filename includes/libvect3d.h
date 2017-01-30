@@ -6,13 +6,15 @@
 /*   By: vroussea <vroussea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/18 15:15:05 by vroussea          #+#    #+#             */
-/*   Updated: 2017/01/30 12:12:54 by vroussea         ###   ########.fr       */
+/*   Updated: 2017/01/30 14:29:01 by vroussea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBVECT3D_H
 
 # define LIBVECT3D_H
+
+# define RAD 0.017453292519943
 
 typedef struct		s_vect3d
 {
