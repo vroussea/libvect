@@ -6,7 +6,7 @@
 /*   By: vroussea <vroussea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/18 15:15:05 by vroussea          #+#    #+#             */
-/*   Updated: 2017/01/30 14:29:01 by vroussea         ###   ########.fr       */
+/*   Updated: 2017/01/31 18:24:07 by vroussea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ t_vect3d			vect3d_rot_z(t_vect3d u, double ang);
 t_vect3d			vect3d_add(t_vect3d u, t_vect3d v);
 t_vect3d			vect3d_sub(t_vect3d u, t_vect3d v);
 t_vect3d			vect3d_mult_scal(t_vect3d u, double k);
+t_vect3d			vect3d_div_scal(t_vect3d u, double k);
+t_vect3d			vect3d_unit(t_vect3d u);
 double				vect3d_scal_prod(t_vect3d u, t_vect3d v);
 double				vect3d_ang(t_vect3d u, t_vect3d v);
 double				vect3d_norm(t_vect3d u);
