@@ -6,7 +6,7 @@
 /*   By: vroussea <vroussea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/18 15:16:43 by vroussea          #+#    #+#             */
-/*   Updated: 2017/01/19 17:49:18 by vroussea         ###   ########.fr       */
+/*   Updated: 2017/02/02 11:20:26 by vroussea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,22 @@ t_vect3d	vect3d_rot_z(t_vect3d u, double ang)
 	tmp = u;
 	u.x = tmp.x * cos(ang) - tmp.y * sin(ang);
 	u.y = tmp.y * cos(ang) + tmp.x * sin(ang);
+	return (u);
+}
+
+t_vect3d	vect3d_rot(t_vect3d u, t_vect3d v, double ang)
+{
+	t_vect3d	tmp;
+
+	tmp = u;
+	u.x = v.x * (cos(ang) + (tmp.x * tmp.x) * ( 1 - cos(ang))) +
+		v.y * (tmp.x * tmp.y * (1 - cos(ang)) - tmp.z * sin(ang)) +
+		v.z * (tmp.x * tmp.z * (1 - cos(ang)) + tmp.y * sin(ang));
+	u.y = v.x * (tmp.y * tmp.x * (1 - cos(ang)) + tmp.z * sin(ang)) +
+		v.y * (cos(ang) + (tmp.y * tmp.y) * (1 - cos(ang))) +
+		v.z * (tmp.y * tmp.z * (1 - cos(ang)) - tmp.x * sin(ang));
+	u.z = v.x * (tmp.z * tmp.x * (1 - cos(ang)) - tmp.y * sin(ang)) +
+		v.y * (tmp.z * tmp.y * (1 - cos(ang)) + tmp.x * sin(ang)) +
+		v.z * (cos(ang) + (tmp.z * tmp.z) * (1 - cos(ang)));
 	return (u);
 }
