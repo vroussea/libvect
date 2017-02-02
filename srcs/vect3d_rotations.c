@@ -6,7 +6,7 @@
 /*   By: vroussea <vroussea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/18 15:16:43 by vroussea          #+#    #+#             */
-/*   Updated: 2017/02/02 11:20:26 by vroussea         ###   ########.fr       */
+/*   Updated: 2017/02/02 13:51:05 by vroussea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ t_vect3d	vect3d_rot(t_vect3d u, t_vect3d v, double ang)
 	t_vect3d	tmp;
 
 	tmp = u;
-	u.x = v.x * (cos(ang) + (tmp.x * tmp.x) * ( 1 - cos(ang))) +
+	u.x = v.x * (cos(ang) + (tmp.x * tmp.x) * (1 - cos(ang))) +
 		v.y * (tmp.x * tmp.y * (1 - cos(ang)) - tmp.z * sin(ang)) +
 		v.z * (tmp.x * tmp.z * (1 - cos(ang)) + tmp.y * sin(ang));
 	u.y = v.x * (tmp.y * tmp.x * (1 - cos(ang)) + tmp.z * sin(ang)) +
