@@ -6,7 +6,7 @@
 #    By: vroussea <vroussea@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/24 09:55:27 by vroussea          #+#    #+#              #
-#    Updated: 2017/02/02 13:35:12 by vroussea         ###   ########.fr        #
+#    Updated: 2017/02/08 15:44:06 by vroussea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ INC_DIR =	includes
 # sources
 SRC_NAME =	vect3d_rotations.c vect3d_add.c vect3d_mult_scal.c vect3d_fill.c   \
 			vect3d_scal_prod.c vect3d_ang.c vect3d_norm.c vect3d_sub.c         \
-			vect3d_unit.c vect3d_div_scal.c vect3d_vect_prod.c
+			vect3d_unit.c vect3d_div_scal.c vect3d_vect_prod.c vect3d_dist.c
 
 # objects
 OBJ_NAME =		$(SRC_NAME:.c=.o)
